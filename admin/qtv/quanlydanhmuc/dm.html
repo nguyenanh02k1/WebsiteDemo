@@ -1,0 +1,515 @@
+<html>
+
+<head>
+    <title>SuperSneaker | Quản lý danh mục</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <link rel='shortcut icon' href='/img/logo2.ico' />
+    <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script type="text/javascript" src="/javascript.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        function dangnhap() {
+            Swal.fire({
+                title: "Super Sneaker",
+                text: "Bạn đã đăng nhập thành công",
+                icon: "success"
+            });
+
+
+
+        }
+        function wait() {
+            Swal.fire({
+                title: "Super Sneaker",
+                text: "Chức năng này đang đc xây dựng, vui lòng quay lại sau.",
+                icon: "info"
+            });
+        }
+    </script>
+
+    <form action="" method="POST">
+        <div class="app">
+            <div class="header">
+                <div class="grid wide">
+                    <div class="header-main">
+                        <div class="logo">
+                            <a href="/admin/index.html"><img src="/img/logo_vip.png" width="200" height="110"></a>
+                        </div>
+                        <div class="search">
+                            <input type="text" name="s" class="search-bar" placeholder="Tìm kiếm">
+                            <style>
+                                .tim {
+                                    height: 40px;
+                                }
+                            </style>
+                            <input class="tim" type="submit" value="Tìm kiếm">
+
+                        </div>
+                        <div class="contact">
+                            <p>Hotline: 0969317395</p>
+                            <p>Email: <a href="mailto:nguyenanh02k1@gmail.com"
+                                    style="color: #333;">nguyenanh02k1@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </form>
+
+    <form action="" method="POST">
+        <div class="header-mobile">
+            <div class="header-mb">
+                <div class="search-mb">
+                    <input type="text" name="s" class="search-bar-mb" placeholder="Tìm kiếm">
+                    <input type="submit" value="Tìm ">
+                </div>
+
+                <a class="shopping-cart-mb" href="/pages/giohang.html">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart"
+                        class="shopping-cart-icon svg-inline--fa fa-shopping-cart fa-w-18" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path fill="white"
+                            d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z">
+                        </path>
+                    </svg>
+                </a>
+
+                <input type="checkbox" hidden id="nav-mb-input" class="nav__input">
+
+                <label for="nav-mb-input" class="category-btn-mb">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
+                        class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path fill="white"
+                            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                        </path>
+                    </svg>
+                </label>
+
+                <label for="nav-mb-input" class="nav__overplay"></label>
+
+                <div class="nav__mb">
+                    <label for="nav-mb-input" class="nav__mb-close">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times"
+                            class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 352 512">
+                            <path fill="currentColumnor"
+                                d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
+                            </path>
+                        </svg>
+                    </label>
+                    <ul class="nav__mb-list">
+                        <li>
+                            <a href="/admin/index.html" class="nav__mb-link">Trang chủ</a>
+                        </li>
+                        <li>
+                            <a href="/admin/gioithieu.html" class="nav__mb-link">Giới thiệu</a>
+                        </li>
+                        <li>
+
+                            <li class="navbar-item navbar-item-category">
+								<a class="navbar-link" style="color: black;">Danh mục</a>
+								<div class="navbar-category" style="background-color: transparent; ">
+									<ul class="navbar-category-list"
+										style="text-align: justify;margin-left: 300px;margin-top: -10px;">
+										<li class="navbar-category-item" style="background-color: black ; ">
+											<a href="/admin/danhmuc/SneakerVans.html" class="category-item__link">Sneaker
+												Vans</a><a href="/admin/danhmuc/SneakerConverse.html"
+												class="category-item__link">Sneaker Converse</a><a
+												href="/admin/danhmuc/SneakerNike.html" class="category-item__link">Sneaker
+												Nike</a>
+											<a href="/admin/danhmuc/GiàyJordan.html" class="category-item__link">Giày Jordan</a><a
+												href="/admin/danhmuc/GiàyBalenciaga.html" class="category-item__link">Giày
+												Balenciaga</a>
+										</li>
+	
+									</ul>
+								</div>
+							</li>
+                        </li>
+                        <li>
+                            <a href="/admin/lienhe.html" class="nav__mb-link">Liên hệ</a>
+                        </li>
+                        <li>
+                            <a href="/admin/giohang.html" class="nav__mb-link">Giỏ hàng</a>
+                        </li>
+                        <li>
+                            <a href="/admin/ttadmin.html" class="nav__mb-link">Tài khoản</a>
+                        </li>
+                        <li>
+                            <a href="/index.html" class="nav__mb-link">Đăng xuất</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </form>
+    <style>
+        .chaychu {
+
+            font-weight: bold;
+            color: red;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 22px;
+            height: 40px;
+        }
+    </style>
+    <div>
+        <marquee behavior="alternate" class="chaychu">WEBSITE DEMO</marquee>
+    </div><br>
+
+    <div class="navigation-bar">
+        <ul class="navbar-list">
+            <li class="navbar-item"><a href="/admin/index.html" class="navbar-link">Trang chủ</a></li>
+            <li class="navbar-item"><a href="/admin/gioithieu.html" class="navbar-link">Giới thiệu</a></li>
+            <li class="navbar-item navbar-item-category">
+                <a href="" class="navbar-link">Danh mục</a>
+                <div class="navbar-category" style="background-color: transparent;">
+                    <ul class="navbar-category-list">
+                        <li class="navbar-category-item"
+                            style="margin-left: 220px;margin-top: 5px ;background-color: #0b0b0b;font-size: 2rem;">
+                            <a href="/admin/danhmuc/SneakerVans.html" class="category-item__link">Sneaker Vans</a><a
+                                href="/admin/danhmuc/SneakerConverse.html" class="category-item__link">Sneaker Converse</a><a
+                                href="/admin/danhmuc/SneakerNike.html" class="category-item__link">Sneaker Nike</a>
+
+
+                            <a href="/admin/danhmuc/GiàyJordan.html" class="category-item__link">Giày Jordan</a><a
+                                href="/admin/danhmuc/GiàyBalenciaga.html" class="category-item__link">Giày Balenciaga</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </li>
+            <li class="navbar-item"><a href="/admin/lienhe.html" class="navbar-link">Liên hệ</a></li>
+
+        </ul>
+        <ul class="navbar-list">
+            <li class="navbar-item"><a href="/admin/giohang.html" class="navbar-link">Giỏ hàng</a></li>
+            <li class="navbar-item"><a href="/admin/ttadmin.html" class="navbar-link">Tài khoản</a></li>
+
+            <li class="navbar-item"><a href="/index.html" class="navbar-link">Đăng xuất</a></li>
+        </ul>
+    </div>
+
+    <ul class="header__sort-bar">
+        <li class="header__sort-item">
+            <a href="/admin/qtv/quanlydanhmuc/dm.html" class="header__sort-link" style="font-size: large;">Quản lý danh
+                mục</a>
+        </li>
+    </ul>
+    <!-- BÊN DƯỚI LÀ sản phẩm -->
+    <div class="container">
+        <div class="grid wide">
+            <div class="row sm-gutter grid-content">
+                <div class="column l-2 me-0 s-0">
+                    <nav class="category">
+                        <h3 class="category-heading" align="center">
+                            <p>***</p>
+                            <a href="">Quản lý danh muc</a>
+                            <p></p>
+                            <p>***</p>
+                        </h3>
+                        <ul class="category-list">
+                            <li class="category-item category-item--active">
+                                <a href="/admin/qtv/ad.html">&lt;- Quay lại </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div> 
+                    
+
+                <a style="cursor: pointer; margin: auto;" onclick="wait()"><img src="/img/them.jpg" alt=""
+                    width="40px" height="40px"><h1 style="margin-top: -36px; margin-left: 53px;">Thêm danh mục </h1></a>
+                <div class="column l-10 me-12 s-12" style="margin: auto;">
+
+                    <!-- BÊN DƯỚI LÀ sản phẩm --> 
+                   
+                            <div class="home-product">
+                       
+                        <div class="row sm-gutter">
+
+                            <style>
+                                .page {
+                                    max-width: 60em;
+                                    margin: 0 auto;
+                                }
+
+                                table th,
+                                table td {
+                                    text-align: left;
+                                }
+
+                                table.layout {
+                                    width: 100%;
+                                    border-collapse: collapse;
+                                }
+
+                                table.display {
+                                    margin: 1em 0;
+                                }
+
+                                table.display th,
+                                table.display td {
+                                    border: 1px solid #B3BFAA;
+                                    padding: .5em 1em;
+                                }
+
+                                table.display th {
+                                    background: #D5E0CC;
+                                }
+
+                                table.display td {
+                                    background: #fff;
+                                }
+
+                                table.responsive-table {
+                                    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+                                }
+                            </style>
+                            
+                            <div class="page">
+                                
+                                <table class="layout display responsive-table">
+                                    <thead>
+                                        <tr>
+                                            <th>STT</th>
+                                            <th>Tên danh mục</th>
+                                            <th>Sửa</th>
+                                            <th>Xoá</th>
+                                        </tr>
+
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Sneaker Vans</td>
+                                                
+                                                <td><a style="cursor: pointer;" onclick="wait()"><img src="/img/sua.jpg" alt="" width="40px"
+                                                            height="40px"></a></td>
+                                                <td><a style="cursor: pointer;" onclick="wait()"><img src="/img/thungrac.jpg" alt="" width="40px"
+                                                            height="40px"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Sneaker Converse</td>                                       
+                                                
+                                                <td><a style="cursor: pointer;" onclick="wait()"><img src="/img/sua.jpg" alt="" width="40px"
+                                                            height="40px"></a></td>
+                                                <td><a style="cursor: pointer;" onclick="wait()"><img src="/img/thungrac.jpg" alt="" width="40px"
+                                                            height="40px"></a></td></tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Sneaker Nike</td>
+                                                
+                                                <td><a style="cursor: pointer;" onclick="wait()"><img src="/img/sua.jpg" alt="" width="40px"
+                                                            height="40px"></a></td>
+                                                <td><a style="cursor: pointer;" onclick="wait()"><img src="/img/thungrac.jpg" alt="" width="40px"
+                                                            height="40px"></a></td></tr>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Giày Jordan</td>
+                                                
+                                                <td><a style="cursor: pointer;" onclick="wait()"><img src="/img/sua.jpg" alt="" width="40px"
+                                                            height="40px"></a></td>
+                                                <td><a style="cursor: pointer;" onclick="wait()"><img src="/img/thungrac.jpg" alt="" width="40px"
+                                                            height="40px"></a></td></tr>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Giày Balenciaga</td>
+                                                
+                                                <td><a style="cursor: pointer;" onclick="wait()"><img src="/img/sua.jpg" alt="" width="40px"
+                                                            height="40px"></a></td>
+                                                <td><a style="cursor: pointer;" onclick="wait()"><img src="/img/thungrac.jpg" alt="" width="40px"
+                                                            height="40px"></a></td></tr>
+                                        </tr>
+                                    </tbody>
+                                    
+                                    
+                                </table>
+                                
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <!-- BÊN trên LÀ sản phẩm -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BÊN trên LÀ sản phẩm -->
+
+
+    <footer id="footer" class="footer"
+    style="background: #1b1a1a;margin-top: 80px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+    <section class="section footer-section dark" id="section_580717420">
+        <div class="bg section-bg fill bg-fill bg-loaded">
+
+
+            <div class="section-bg-overlay absolute fill"></div>
+
+
+        </div>
+
+
+
+        <div class="section-content relative">
+
+
+            <div class="row row1" id="row-835929590">
+
+
+                <div id="col-1859331800" class="col medium-4 small-12 large-4">
+                    <div class="col-inner">
+
+
+
+                        <p style="margin-left: 50px;">
+                            <iframe
+                                src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/supersneaker.pro&amp;tabs=timeline&amp;width=450&amp;height=500&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=1062661644170465"
+                                width="250px" height="350px" style="border:none;overflow:hidden" scrolling="no"
+                                frameborder="0" allowfullscreen="true"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </p>
+
+
+                    </div>
+                </div>
+
+
+
+                <div id="col-1864700331" class="col medium-4 small-12 large-4">
+                    <div class="col-inner">
+
+
+
+                        <div class="row row-small" id="row-42482787">
+
+
+                            <div id="col-1511161976" class="col medium-7 small-7 large-7">
+                                <div class="col-inner">
+
+                                    <style>
+                                        .text {
+
+
+                                            color: white;
+                                            font-size: 2rem;
+                                            margin-bottom: 1.4rem;
+                                        }
+                                    </style>
+
+                                    <p class="tt_footer text-uppercase h4" style="font-size: 2.2rem;">GIỚI THIỆU</p>
+                                    <br>
+                                    <p><a href="/gioithieu.html"><span class="text">Về chúng tôi</span></a></p><br>
+                                    <p><a onclick="wait()"><span class="text">Hướng dẫn mua hàng
+                                            </span></a></p><br>
+                                    <p><a onclick="wait()"><span class="text">Chính sách giao hàng
+                                            </span></a></p><br>
+                                    <p><a onclick="wait()"><span class="text">Chính sách đổi trả
+                                            </span></a></p><br>
+                                    <p><a onclick="wait()"><span class="text">Chính sách bảo hành
+                                            </span></a></p><br>
+                                    <p><a onclick="wait()"><span class="text">Chính sách bảo
+                                                mật</span></a></p>
+
+                                </div>
+                            </div>
+
+
+
+                            <div id="col-2104917204" class="col medium-5 small-5 large-5">
+                                <div class="col-inner">
+
+
+
+                                    <p class="tt_footer h4 text-uppercase" style="font-size: 2.2rem;">THƯƠNG HIỆU
+                                    </p><br>
+                                    <p><a class="text" href="/danhmuc/SneakerVans.html">Sneaker Vans</a></p><br>
+                                    <p><a class="text" href="/danhmuc/SneakerConverse.html">Sneaker Converse</a></p>
+                                    <br>
+                                    <p><a class="text" href="/danhmuc/SneakerNike.html">Sneaker Nike</a></p><br>
+                                    <p><a class="text" href="/danhmuc/GiàyJordan.html">Giày Jordan</a></p><br>
+                                    <p><a class="text" href="/danhmuc/GiàyBalenciaga.html">Giày Balenciaga</a></p>
+                                    <br>
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <div id="col-632788574" class="col medium-4 small-12 large-4">
+                    <div class="col-inner">
+
+
+
+                        <div class="item_footer_right" style="font-size: 2rem;">
+                            <ul>
+                                <li>Địa chỉ: Ngõ 147 Phương Canh, Xuân Phương, Nam từ liêm, TP Hà Nội</li>
+                                <li>SĐT Kinh Doanh: 0969.317.395</li>
+                                <li>Email: nguyenanh02k1@gmail.com</li>
+                                <li>Website: www.supersneaker.com</li>
+                            </ul>
+                        </div>
+                        <p style="margin-left: 15px;" ><iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.956532387069!2d105.7433943751293!3d21.0344251806163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134548e08de784f%3A0xa29b9e62e1baa874!2zMTQ3IMSQLiBQaMawxqFuZyBDYW5oLCBYdcOibiBQaMawxqFuZywgTmFtIFThu6sgTGnDqm0sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1710875129502!5m2!1svi!2s"
+                                width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            #section_580717420 {
+                padding-top: 30px;
+                padding-bottom: 30px;
+                background-color: rgb(13, 13, 13);
+                color: aliceblue;
+            }
+
+            #section_580717420 .section-bg-overlay {
+                background-color: rgba(15, 14, 14, 0.878);
+            }
+
+            #section_580717420 .section-bg.bg-loaded {
+                background-image: url(https://xamsneakerhcm.com/wp-content/uploads/2022/04/home1-slider1.jpg);
+            }
+        </style>
+    </section>
+</footer>
+    <div class="scroll-to-top" onclick="scrollToTop();">
+        <i class="scroll-to-top-icon fas fa-chevron-up"></i>
+    </div>
+
+
+
+    </div>
+</body>
+
+</html>
